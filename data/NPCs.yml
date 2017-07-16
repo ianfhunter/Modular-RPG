@@ -1,0 +1,31 @@
+Harold the Cook:
+  General Text:
+    - "Oh! Hello! It's not every day I get visitors. Help yourself to the larder."
+  Quest Text:
+    Fit for a King:[
+      {
+        Text: ["Deary me, I'll never have this ready..."," Can you bring me three raspberries from the garden?"],
+        Requires: [None]
+      },
+      {
+        Text: ["Oh simply fantastic! You are a livesaver!"," One moment... Mmm.. Yes... A little more salt... ","There we are! A Pie fit for a king! Can you bring it to him? I need to make fifty of these by tomorrow!"],
+        Requires: [Raspberry,Raspberry,Raspberry]
+      },
+      {
+        Text: ["Splendid! I have heard already how much he liked it. ","Here, as some small thanks take some of these cooking utensils. I recently replaced my own with newer versions, so I don't need these."],
+        Requires: [QuestTokenFitForAKing],
+        Reward: [Sieve, Bowl, Whisk, Rolling Pin, Cooking Tray]
+      }
+    ]
+
+King William:
+  General Text:
+    - "Where are my guards when I need them. Get Out!"
+  Quest Text:
+    Fit for a King:[
+      {
+        Text: ["Hmm.. I don't recognise you as one of my servants. I'm damn hungry though and we can skip the blasted taste test. Let me have some of this while you stay here.", "Oh my..", "This is the finest pie I have ever had.", "Go tell Harold that he is a genuis!", "Oh, blis... I want more already..."],
+        Item: [QuestTokenFitForAKing]
+      }
+    ]
+

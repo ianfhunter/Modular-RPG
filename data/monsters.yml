@@ -1,0 +1,30 @@
+Monsters:
+  Gobbler:
+    Health: 80
+    weapon: Teeth
+    attack modifier: 3
+    armor: Leather 
+    defence modifier: 1
+
+  Gibbler:
+    Health: 40
+    weapon: Explosion
+    weapon name: Fragments of sharp rigid skin
+    attack modifier: 0.8
+    armor: None
+    defence modifier: 0
+
+  Glubbler:
+    Health: 120
+    weapon: Beam Staff
+    weapon name: Blast of Water
+    attack modifier: 2
+    armor: False
+    defence modifier: 2
+
+  Rabbit:
+    Health: 12
+    weapon: Teeth
+    attack modifier: 2
+    armor: False
+    defence modifier: 2

@@ -1,0 +1,57 @@
+Sword:
+  type: Weapon
+  damage modifier: 1 
+  reach: 1
+
+Scimitar:
+  type: Weapon
+  damage modifier: 1.2
+  reach: 0.8
+
+Pike:
+  type: Weapon
+  damage modifier: 1.2
+  reach: 1.4
+
+Halbeard:
+  type: Weapon
+  damage modifier: 1.8
+  reach: 2
+
+Trident:
+  type: Weapon
+  damage modifier: 1.3
+  reach: 0.6
+
+Dagger:
+  type: Weapon
+  damage modifier: 3
+  reach: 0.2
+
+Lance:
+  type: Weapon
+  damage modifier: 1.6
+  reach: 2.3
+
+Net:
+  type: Weapon
+  damage modifier: 0
+  reach: 1
+  effect: grapple
+
+Teeth:
+  type: Resource
+  damage modifier: 1
+  reach: 0.2
+
+Explosion:
+  type: Insubstantial
+  damage modifier: 5
+  reach: 0.2
+  effect: kill self
+
+Beam Staff:
+  type: Weapon
+  damage modifier: 1
+  reach: 0.2
+  

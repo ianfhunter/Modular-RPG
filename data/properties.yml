@@ -1,0 +1,91 @@
+Wooden:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 1 
+  recipe: 
+    - Wood
+
+Bone:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 1 
+  recipe: 
+    - Bone 
+
+Jade:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 1 
+  recipe: 
+    - Jade 
+ 
+Copper:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 2
+  recipe:
+    - Copper
+    
+Bronze:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 2
+  recipe:
+    - Bronze
+
+Leather:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 2
+  recipe:
+    - Leather
+
+Iron:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 2
+  recipe:
+    - Iron
+
+Steel:
+  type: attribute
+  subtype: [weapon, armor]
+  damage modifier: 2
+  recipe:
+    - Steel
+
+Gilded:
+  type: attribute
+  subtype: [weapon_mod, armor_mod]
+  damage modifier: 1
+  recipe:
+    - Quicksilver
+
+Spiked:
+  type: attribute
+  subtype: [weapon_mod, armor_mod]
+  damage modifier: 1.2
+  defence modifier: 1.2
+  recipe:
+    - Quicksilver
+
+Decorative:
+  type: attribute
+  subtype: [weapon_mod, armor_mod]
+  damage modifier: 1
+  recipe:
+    - Gold
+
+Ceremonial:
+  type: attribute
+  subtype: [weapon_mod, armor_mod]
+  damage modifier: 0.8
+  recipe:
+    - Gold
+
+Fire:
+  type: attribute
+  subtype: [jewelery]
+  effect: fire
+  recipe:
+    - ruby

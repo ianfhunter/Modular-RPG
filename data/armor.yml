@@ -1,0 +1,119 @@
+Helmet:
+  type: Armor
+  location: Head
+  defence modifier: 2
+
+Hat:
+  type: Armor
+  location: Head
+  defence modifier: 1.2
+
+Cowl:
+  type: Armor
+  location: Head
+  defence modifier: 1.1
+
+Veil:
+  type: Armor
+  location: Head
+  defence modifier: 1
+
+Mask:
+  type: Armor
+  location: Head
+  defence modifier: 1.1
+
+Breastplate:
+  type: Armor
+  location: Torso
+  defence modifier: 5
+
+Cuirass:
+  type: Armor
+  location: Torso
+  defence modifier: 4
+
+Chainmail:
+  type: Armor
+  location: Torso
+  defence modifier: 3.5 
+
+Vest:
+  type: Armor
+  location: Torso
+  defence modifier: 1.5 
+
+Greaves:
+  type: Armor
+  location: Legs
+  defence modifier: 2
+
+Plate Leggings:
+  type: Armor
+  location: Legs
+  defence modifier: 3.5
+
+Gloves:
+  type: Armor
+  location: Hands
+  defence modifier: 1.3
+
+Plate Boots:
+  type: Armor
+  location: Feet
+  defence modifier: 3.5
+
+Sandals:
+  type: Armor
+  location: Feet
+  defence modifier: 1
+
+Shield:
+  type: Armor
+  location: Shield
+  defence modifier: 1
+
+Spaulders:
+  type: Armor
+  location: Shoulders
+  defence modifier: 1
+
+Mantle:
+  type: Armor
+  location: Shoulders
+  defence modifier: 1
+
+Waistguard:
+  type: Armor
+  location: Waist
+  defence modifier: 1.3
+
+Belt:
+  type: Armor
+  location: Waist
+  defence modifier: 1
+
+Bracers:
+  type: Armor
+  location: Arms
+  defence modifier: 1
+
+Ring:
+  type: Appearance
+  location: Finger
+
+Earring:
+  type: Appearance
+  location: Ear
+
+Nosering:
+  type: Appearance
+  location: Nose
+
+Necklace:
+  type: Appearance
+  location: Neck
+
+Bag:
+  type: Appearance
+  location: back

@@ -1,0 +1,81 @@
+Stone:
+  type: Resource
+Bone:
+  type: Resource
+Leather:
+  type: Fabric
+Wood:
+  type: Resource
+Water:
+  type: Resource
+Mercury:
+  alt name: QuickSilver
+  type: Resource
+Tin: 
+  type: Mineral
+Gold Ore:
+  type: Mineral
+Silver Ore:
+  type: Mineral
+Platinum Ore:
+  type: Mineral
+Diamond:
+  type: Mineral
+Lead:  
+  type: Mineral
+Aluminium Ore:
+  type: Mineral
+Carbon:
+  type: Mineral
+Sulfur:
+  type: Mineral
+Nickel:
+  type: Mineral
+Zinc:
+  type: Mineral
+Copper:
+  type: Mineral
+Iron Ore:
+  type: Mineral
+Coal:
+  type: Mineral
+Obsidian:
+  type: Glass
+  recipe:
+    - lava
+Jade:
+   type: Mineral
+
+Bronze:
+  type: Metal
+  recipe:
+    - Tin
+    - Tin
+    - Copper
+    - Copper
+
+Pewter:
+  type: Metal
+  recipe:
+    - Tin
+    - Tin
+    - Copper
+Iron:
+  type: Metal
+  recipe:
+    Iron Ore
+Brass:
+  type: Metal
+  recipe:
+    - Zinc
+    - Copper
+Steel:
+  type: Metal
+  recipe:
+    - Iron Ore
+    - Coal
+Cupronickel:
+  type: Metal
+  recipe:
+    - Nickel
+    - Copper
