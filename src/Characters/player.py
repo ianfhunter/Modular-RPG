@@ -1,11 +1,13 @@
 import pyglet
 from pyglet.window import key
-from utils import *
-from MapObject import *
+import sys
+sys.path.append('..')
+from Utils.movement import isometric
+from Locales.MapObject import MapObject
 
 class Player(MapObject):
     def __init__(self, x,y):
-        MapObject.__init__(self, x, y, "resources/sprites/man.png")
+        MapObject.__init__(self, x, y, "sprites/man.png")
 
     def move(self, x, y):
         print "Move", x, y
