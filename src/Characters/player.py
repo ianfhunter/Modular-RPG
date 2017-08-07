@@ -5,8 +5,8 @@ sys.path.append('..')
 from Locales.MapObject import MapObject
 
 class Player(MapObject):
-    def __init__(self, x,y):
-        MapObject.__init__(self, x, y, "sprites/man.png")
+    def __init__(self):
+        MapObject.__init__(self, "sprites/man.png")
 
     def parseKeys(self, symbol, modifiers):
         print('A key was pressed')
@@ -31,6 +31,10 @@ class Player(MapObject):
             if Y+1 < len(self.owner.grid):
                 if self.owner.grid[Y+1][X] > 1:
                     print("There is an interactive object to the player's South")
+            if Y+1 < len(self.owner.grid):
+                if type(self.owner.grid[Y+1][X]) != int:
+                    print("There is an interactive object to the player's South 1")
+                    item = self.owner.grid[Y+1][X]
             print("Check",Y-1, X)  
             if Y-1 > 0: 
                 if self.owner.grid[Y-1][X]  > 1:

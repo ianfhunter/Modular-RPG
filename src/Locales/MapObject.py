@@ -2,9 +2,9 @@ import pyglet
 from Utils.movement import isometric
 
 class MapObject:
-    def __init__(self, x, y, image):        
-        self.x = x;
-        self.y = y;
+    def __init__(self, image):        
+        self.x = 0;
+        self.y = 0;
         self.b_x = 0;
         self.b_y = 0;
         if image:
@@ -34,8 +34,8 @@ class MapObject:
     def getAbsXY(self):
         print(self.b_x, self.x)
         print(self.b_y, self.y)
-        x_grid = self.b_x+self.x - 1
-        y_grid = self.b_y-self.y + 1
+        x_grid = self.b_x+self.x 
+        y_grid = self.b_y-self.y
         print(x_grid, y_grid)
         return (x_grid, y_grid)
 

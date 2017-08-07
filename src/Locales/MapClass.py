@@ -1,4 +1,6 @@
 import pyglet 
+from Blocks.Ore import Ore
+
 
 class MapClass:
 
@@ -14,7 +16,7 @@ class MapClass:
         [0,0,0,0,0,0,2],
         [0,0,0,0,0,0,2],
         [0,0,0,0,0,0,0],
-        [0,2,2,0,0,0,0],
+        [0,Ore("Tin"),2,0,0,0,0],
         ]
         self.x_grid_stride = 70
         self.y_grid_stride = 40
@@ -30,29 +32,8 @@ class MapClass:
         for x in self.contents:
             x[0].blit(x[1], x[2], self.x_grid_stride, self.y_grid_stride)
 
-    def containObject(self, obj, base_x, base_y, base_g):
-        self.contents.append((obj, base_x, base_y))
+    def containObject(self, obj, pixel_yx, grid_yx):
+        self.contents.append((obj, pixel_yx[1], pixel_yx[0]))
         obj.owner = self
-        obj.b_x = base_g[1]
-        obj.b_y = base_g[0]
-
-    def checkForPotentialInteractions(self):
-        for x in self.contents:
-            X, Y = x[0].getAbsXY()
-            print("Currently Standing at", Y, X)
-            print("Check",Y+1, X )
-            if Y+1 < len(self.grid):
-                if self.grid[Y+1][X] > 1:
-                    print("There is an interactive object to the player's South")
-            print("Check",Y-1, X)  
-            if Y-1 > 0: 
-                if self.grid[Y-1][X]  > 1:
-                    print("There is an interactive object to the player's North")
-            print("Check",Y, X+1)   
-            if X+1 < len(self.grid[0]):
-                if self.grid[Y][X+1]  > 1:
-                    print("There is an interactive object to the player's East", "(",Y,X+1,")")
-            print("Check",Y, X-1)
-            if X-1 > 0:
-                if self.grid[Y][X-1]  > 1:
-                    print("There is an interactive object to the player's West")
+        obj.b_y = grid_yx[0]
+        obj.b_x = grid_yx[1]

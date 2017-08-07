@@ -12,9 +12,9 @@ pyglet.resource.path = ['C:\\Users\\Ian\\Code\\RPGv2\\resources']
 pyglet.resource.reindex()
 
 window = pyglet.window.Window(visible=False, resizable=True)
-player = Player(1,1)
+player = Player()
 smithy = MapClass()
-smithy.containObject(player, 115, 215, (6, 0))
+smithy.containObject(player, (215, 185), (6, 0))
     
 @window.event
 def on_draw():
@@ -24,7 +24,7 @@ def on_draw():
 @window.event
 def on_key_press(symbol, modifiers):
     player.parseKeys(symbol, modifiers)
-    smithy.checkForPotentialInteractions()
+    player.checkForPotentialInteractions()
 
 if __name__ == '__main__':
     # Enable alpha blending, required for image.blit.
