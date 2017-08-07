@@ -2,24 +2,11 @@ import pyglet
 from pyglet.window import key
 import sys
 sys.path.append('..')
-from Utils.movement import isometric
 from Locales.MapObject import MapObject
 
 class Player(MapObject):
     def __init__(self, x,y):
         MapObject.__init__(self, x, y, "sprites/man.png")
-
-    def move(self, x, y):
-        print "Move", x, y
-#        if not self.canMove(self.x+x, self.y+y, self.b_x, self.b_y):
-        if not self.canMove(x, y):
-            return
-        else:
-            self.x, self.y = self.x + x, self.y + y
-
-    def blit(self, base_x, base_y, MOVE_UNIT_X, MOVE_UNIT_Y):
-        xy = isometric(self.x, self.y, MOVE_UNIT_X, MOVE_UNIT_Y)
-        self.img.blit(base_x + xy[0], base_y + xy[1], 0)
 
     def parseKeys(self, symbol, modifiers):
         print('A key was pressed')
@@ -35,3 +22,24 @@ class Player(MapObject):
         if symbol == key.UP:
             print("Up")
             self.move(0,1)
+
+    def checkForPotentialInteractions(self):
+        for x in self.owner.contents:
+            X, Y = x[0].getAbsXY()
+            print("Currently Standing at", Y, X)
+            print("Check",Y+1, X )
+            if Y+1 < len(self.owner.grid):
+                if self.owner.grid[Y+1][X] > 1:
+                    print("There is an interactive object to the player's South")
+            print("Check",Y-1, X)  
+            if Y-1 > 0: 
+                if self.owner.grid[Y-1][X]  > 1:
+                    print("There is an interactive object to the player's North")
+            print("Check",Y, X+1)   
+            if X+1 < len(self.owner.grid[0]):
+                if self.owner.grid[Y][X+1]  > 1:
+                    print("There is an interactive object to the player's East", "(",Y,X+1,")")
+            print("Check",Y, X-1)
+            if X-1 > 0:
+                if self.owner.grid[Y][X-1]  > 1:
+                    print("There is an interactive object to the player's West")

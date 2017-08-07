@@ -2,7 +2,7 @@ import pyglet
 
 class MapClass:
 
-    def __init__(self):
+    def __init__(self, texture="maps/room1_DEBUG.png"):
         self.grid = [
         [0,0,0,0,0,0,0],
         [0,0,0,0,0,0,0],
@@ -18,7 +18,7 @@ class MapClass:
         ]
         self.x_grid_stride = 70
         self.y_grid_stride = 40
-        self.texture = "maps/room1_DEBUG.png"
+        self.texture = texture
         self.img = pyglet.resource.image(self.texture).get_texture(rectangle=True)
 
         self.img.anchor_x = self.img.width // 2
@@ -39,16 +39,20 @@ class MapClass:
     def checkForPotentialInteractions(self):
         for x in self.contents:
             X, Y = x[0].getAbsXY()
-            print("Moving to", X, Y)
-            print("Check", X,Y+1)
-            # if self.grid[X][Y+1] > 1:
-            #     print("There is an interactive object to the player's South")
-            # print("Check", X,Y-1)
-            # if self.grid[X][Y-1]  > 1:
-            #     print("There is an interactive object to the player's North")
-            # print("Check", X+1,Y)
-            # if self.grid[X+1][Y]  > 1:
-            #     print("There is an interactive object to the player's East")
-            # print("Check", X-1,Y)
-            # if self.grid[X-1][Y]  > 1:
-            #     print("There is an interactive object to the player's West")
+            print("Currently Standing at", Y, X)
+            print("Check",Y+1, X )
+            if Y+1 < len(self.grid):
+                if self.grid[Y+1][X] > 1:
+                    print("There is an interactive object to the player's South")
+            print("Check",Y-1, X)  
+            if Y-1 > 0: 
+                if self.grid[Y-1][X]  > 1:
+                    print("There is an interactive object to the player's North")
+            print("Check",Y, X+1)   
+            if X+1 < len(self.grid[0]):
+                if self.grid[Y][X+1]  > 1:
+                    print("There is an interactive object to the player's East", "(",Y,X+1,")")
+            print("Check",Y, X-1)
+            if X-1 > 0:
+                if self.grid[Y][X-1]  > 1:
+                    print("There is an interactive object to the player's West")
