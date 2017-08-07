@@ -11,9 +11,11 @@ class Player(MapObject):
 
     def move(self, x, y):
         print "Move", x, y
-        if not self.canMove(self.x + x, self.y+y, self.b_x, self.b_y):
+#        if not self.canMove(self.x+x, self.y+y, self.b_x, self.b_y):
+        if not self.canMove(x, y):
             return
-        self.x, self.y = self.x + x, self.y + y
+        else:
+            self.x, self.y = self.x + x, self.y + y
 
     def blit(self, base_x, base_y, MOVE_UNIT_X, MOVE_UNIT_Y):
         xy = isometric(self.x, self.y, MOVE_UNIT_X, MOVE_UNIT_Y)

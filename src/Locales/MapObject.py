@@ -12,19 +12,21 @@ class MapObject:
         self.img = pyglet.resource.image(image).get_texture(rectangle=True)
         self.owner = None
 
-    def canMove(self, x, y, base_x, base_y, debug=True):
+    def canMove(self, x, y, debug=True):
         if self.owner is None:
-            return
+            return  # Not inside an object, so can't move around in it.
         else:
             x_grid, y_grid = self.getAbsXY()
+            new_x = x_grid+x
+            new_y = y_grid-y
             if debug:
-                print "Move to Position (X):" , x_grid ,"Limitation 0-"+str(len(self.owner.grid[0]))
-                print "Move to Position (Y):" , y_grid ,"Limitation 0-"+str(len(self.owner.grid))
-            if y_grid >= len(self.owner.grid) or y_grid < 0:        return False # Y-Dim Edge
-            if x_grid >= len(self.owner.grid[0]) or x_grid < 0:     return False # X-Dim Edge
+                print "Move to Position (X):" , new_x,"Limitation 0-"+str(len(self.owner.grid[0]))
+                print "Move to Position (Y):" , new_y ,"Limitation 0-"+str(len(self.owner.grid))
+            if new_y >= len(self.owner.grid) or new_y < 0:        return False # Y-Dim Edge
+            if new_x >= len(self.owner.grid[0]) or new_x < 0:     return False # X-Dim Edge
                 
-            if self.owner.grid[y_grid][x_grid] == 1:                return False # Untraversable
-            if self.owner.grid[y_grid][x_grid] == 0:                return True  # Fallthrough Ok
+            if self.owner.grid[new_y][new_x] == 1:                return False # Untraversable
+            if self.owner.grid[new_y][new_x] == 0:                return True  # Fallthrough Ok
 
     def getAbsXY(self):
         x_grid = self.b_x+self.x - 1
