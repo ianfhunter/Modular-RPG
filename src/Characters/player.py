@@ -35,6 +35,7 @@ class Player(MapObject):
                 if type(self.owner.grid[Y+1][X]) != int:
                     print("There is an interactive object to the player's South 1")
                     item = self.owner.grid[Y+1][X]
+                    item.prompt()
             print("Check",Y-1, X)  
             if Y-1 > 0: 
                 if self.owner.grid[Y-1][X]  > 1:
@@ -42,7 +43,8 @@ class Player(MapObject):
             print("Check",Y, X+1)   
             if X+1 < len(self.owner.grid[0]):
                 if self.owner.grid[Y][X+1]  > 1:
-                    print("There is an interactive object to the player's East", "(",Y,X+1,")")
+                    print("There is an interactive object to the player's East")
+
             print("Check",Y, X-1)
             if X-1 > 0:
                 if self.owner.grid[Y][X-1]  > 1:

@@ -4,13 +4,11 @@ import sys
 sys.path.append('..')
 from Utils.movement import isometric
 from Locales.MapObject import MapObject
-from Locales.InteractiveObject import Interactive
 
 
-class Ore(MapObject, Interactive):
+class Button(MapObject):
     def __init__(self, material):
         MapObject.__init__(self, None)
 
-
-    def prompt(self):
-        Interactive.prompt(self)
+    def interact(self):
+        print("Press Me")
