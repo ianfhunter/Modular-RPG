@@ -1,6 +1,0 @@
-grapple:
-  - duration: strength
-  - lose_turn: True
-
-kill self:
-  - lose health: all

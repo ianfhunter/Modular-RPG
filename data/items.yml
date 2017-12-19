@@ -1,3 +1,0 @@
-items:
-  - !include ../data/weapons.yml
-  - !include ../data/materials.yml
