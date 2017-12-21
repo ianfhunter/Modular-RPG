@@ -1,0 +1,47 @@
+Gallcrackle:
+  rarity: 10
+  loot: [Tooth, Horn, Claw, Skull, Bone, Fur]
+
+Grievesnake:
+  rarity: 15
+  loot: [Fang, Skull, Bone, Skin]
+
+Cave Bat:
+  rarity: 7
+  loot: [Wing]
+
+Murkfang:
+  rarity: 20
+  loot: [Tail, Ear, Trunk, Tusk]
+
+Cryptflayer:
+  rarity: 10
+  loot: [Tooth, Horn, Claw, Skull, Bone, Fur]
+
+Gorppouth:
+  rarity: 15
+  loot: [Fang, Skull, Bone, Skin]
+
+Obus:
+  rarity: 7
+  loot: [Wing]
+
+Tombcrawler:
+  rarity: 20
+  loot: [Tail, Ear, Trunk, Tusk]
+
+The Monstrous World Bear:
+  rarity: 10
+  loot: [Tooth, Horn, Claw, Skull, Bone, Fur]
+
+The Arctic Woman:
+  rarity: 15
+  loot: [Fang, Skull, Bone, Skin]
+
+Tranceman:
+  rarity: 7
+  loot: [Wing]
+
+Mistgolem:
+  rarity: 20
+  loot: [Tail, Ear, Trunk, Tusk]
