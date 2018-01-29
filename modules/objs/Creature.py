@@ -3,6 +3,10 @@ from . import  WorldObject
 from . import  Container
 
 class Creature(WorldObject.WorldObject):
+    """
+    A Creature is something that lives, can interact with the world and be interacted with.
+    A dead creature is still a creature.
+    """
 
     def __init__(self, args):
         super().__init__(args)
