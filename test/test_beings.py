@@ -6,28 +6,12 @@ sys.path.insert(0, up1)
 from modules.objs import MonsterFactory
 
 
-
-#
-#
-#
-
-#
-# print(A.health)
-#
-# assert(A.isDead() and not A.isAlive())
-#
-# print("Try to loot")
-#
-#
-
-# print("healed: ", A.health)
-
-mf = None
-monster = None
-
 def gen_cactus_monster(health=100):
+
+    mf = MonsterFactory.MonsterFactory()
+
     origin = {"pos_X":0,"pos_Y":0,"pos_Z":0}
-    mon = {"name":"Cactus Turtle"}
+    mon = {"name":"Cactus Turtle", "resources":["Needle", "Shell"], "loot":["haystalk"], "inventory":[]}
     stats =  {"health": health}
     mon.update(stats)
     mon.update(origin)
@@ -35,16 +19,11 @@ def gen_cactus_monster(health=100):
     return A
 
 
-class TestStringMethods(unittest.TestCase):
+class TestMonsterMethods(unittest.TestCase):
 
     def test_set_monster_creation(self):
         A = gen_cactus_monster()
         self.assertEqual(A.name, "Cactus Turtle", "Monster Generated incorrectly")
-
-    def test_random_monster_creation(self):
-        # A = mf.produce(mon, rand=True)
-        # print(A.name)
-        pass
 
     def test_health(self):
         A = gen_cactus_monster(health=200)
@@ -79,12 +58,15 @@ class TestStringMethods(unittest.TestCase):
         while(A.isAlive()):
             A.take_damage(1)
 
-
-
-    def setUp(self):
-        global mf
-        mf = MonsterFactory.MonsterFactory()
-
+        loot = A.harvest()
+        possible_loot = ["Needle", "Shell"]
+        self.assertTrue(loot in possible_loot)
+        possible_loot.remove(loot)
+        loot = A.harvest()
+        self.assertTrue(loot in possible_loot)
+        possible_loot.remove(loot)
+        loot = A.harvest()
+        self.assertTrue(loot is None)        
 
 if __name__ == '__main__':
     unittest.main()
